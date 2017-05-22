@@ -15,7 +15,7 @@
  *     Smart&Soft - initial API and implementation
  */
 
-package com.smartnsoft.log;
+package com.smartnsoft.log4j;
 
 import com.smartnsoft.droid4me.log.Logger;
 import com.smartnsoft.droid4me.log.LoggerFactory;
