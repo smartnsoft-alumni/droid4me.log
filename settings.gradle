@@ -1,2 +1,3 @@
+include ':logmatic'
 include ":log4j"
 include ":logentries"

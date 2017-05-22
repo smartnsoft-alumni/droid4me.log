@@ -1,0 +1,69 @@
+apply plugin: "com.android.library"
+apply plugin: "maven"
+
+ext
+{
+  droid4meVersion="2.5.1"
+}
+
+android
+{
+  compileSdkVersion 25
+  buildToolsVersion "25.0.3"
+
+  defaultConfig
+  {
+    minSdkVersion 16
+    targetSdkVersion 25
+
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes
+  {
+    release
+    {
+      minifyEnabled false
+      zipAlignEnabled true
+      proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+    }
+  }
+}
+
+dependencies
+{
+  // Smart&Soft
+  compile("com.smartnsoft:droid4me:$droid4meVersion")
+
+  //Third party library
+  compile ("io.logmatic:android-log:0.1")
+}
+
+uploadArchives
+{
+  repositories
+  {
+    mavenDeployer
+    {
+      repository(url: nexusReleaseUrl)
+      {
+        authentication(userName: nexusUsername, password: nexusPassword)
+      }
+
+      snapshotRepository(url: nexusSnapshotUrl)
+      {
+        authentication(userName: nexusUsername, password: nexusPassword)
+      }
+
+      pom.project
+      {
+        name "logmatic"
+        groupId "com.smartnsoft"
+        artifactId "logmatic"
+        version android.defaultConfig.versionName
+        packaging "aar"
+      }
+    }
+  }
+}
