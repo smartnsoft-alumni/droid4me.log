@@ -26,7 +26,7 @@ gradle clean choosen_module:assembleRelease
 or
 
 ```console
-gradle -b  choosen_module/build.gradle clean assembleRelease
+gradle -b choosen_module/build.gradle clean assembleRelease
 ```
 
 ## Author
