@@ -7,6 +7,8 @@ Available implementations :
 * logmatic
 * log4j
 
+**Note :** a default Android logger implementation is available into the droid4me framework.
+
 ## Usage
 
 ### As Library Project
