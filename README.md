@@ -11,6 +11,40 @@ Available implementations :
 
 ## Usage
 
+### From JCenter
+
+Library releases are available on Jcenter
+
+**Gradle**
+
+```groovy
+compile 'com.smartnsoft:log4j:1.1'
+compile 'com.smartnsoft:logentries:4.4.1.3'
+compile 'com.smartnsoft:logmatic:0.1.1'
+```
+
+**Maven**
+
+```xml
+<dependency>
+  <groupId>com.smartnsoft</groupId>
+  <artifactId>log4j</artifactId>
+  <version>1.1</version>
+  <type>aar</type>
+</dependency>
+<dependency>
+  <groupId>com.smartnsoft</groupId>
+  <artifactId>logentries</artifactId>
+  <version>4.4.1.3</version>
+  <type>aar</type>
+</dependency>
+<dependency>
+  <groupId>com.smartnsoft</groupId>
+  <artifactId>logmatic</artifactId>
+  <version>0.1.1</version>
+  <type>aar</type>
+</dependency>
+```
 ### As Library Project
 
 Check out this repository and add it as a library project.
